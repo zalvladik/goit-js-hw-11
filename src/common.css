@@ -11,7 +11,7 @@ form{
     padding-top: 20px;
     padding-bottom:20px;
     text-align: center;
-    background-color: rgb(50, 68, 146);
+    background-color: rgb(50, 60, 146);
     height: 80px;
 }
 input{
@@ -31,7 +31,7 @@ input{
     font-weight: 700;
     font-size: 16px;
     line-height: 1.92;
-    background-color: rgb(30, 30, 131);
+    background-color: rgb(24, 24, 129);
     letter-spacing: 0.06em;
     justify-content: center;
     transform: scale(1);
@@ -42,3 +42,9 @@ input{
    display: none;
 }
 
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

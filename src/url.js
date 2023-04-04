@@ -9,10 +9,9 @@ export class JSONPlaceholderAPI {
         return fetch(`${BASE_URL}?q=${search}&key=${API_KEY}&image_type='photo'&orientation='horizontal'&safesearch='true'&per_page=40&page=${numberPage}`)
         .then((res)=> {
             if(!res.ok){
-                throw new Error(response.status)
+                console.log('error');
             }
     numberPage = numberPage + 1
-    console.log(numberPage)
     return res.json()
         })
     }
