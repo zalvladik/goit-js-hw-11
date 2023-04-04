@@ -14,12 +14,13 @@ import Notiflix from 'notiflix';
 
 const urlAPI = new JSONPlaceholderAPI()
 
-function makeMorePhotos(e) {
+async function makeMorePhotos(e) {
+    try{
     if(currentValue.value === ''){
         return Notiflix.Notify.failure('Будь ласка введіть слово для пошуку');
     }
-urlAPI.fetchPhotos(currentValue.value)
-.then(data =>{
+    urlAPI.fetchPhotos(currentValue.value)
+    .then(data =>{
     if(data.hits.length === 0){
        morePhotosButton.classList.add('is-hidden')
       return Notiflix.Notify.failure('Будь ласка введіть правильне слово для пошуку')
@@ -28,9 +29,10 @@ urlAPI.fetchPhotos(currentValue.value)
     console.log(data.hits)
     container.insertAdjacentHTML('beforeend',galaryCreator(data.hits))
 })
-.catch(error => {
+}
+  catch(error)  {
      console.log(error)
-})
+}
 
 }
 function makerGalery(e){

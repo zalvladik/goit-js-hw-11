@@ -6,6 +6,7 @@ ul,li,a,p,h1,h2,h3,h4,h5,h6{
 }
 body{
     text-align: center;
+    background-color: #818686;
 }
 form{
     padding-top: 20px;
@@ -43,8 +44,26 @@ input{
 }
 
 .gallery{
+    margin: 0px 30px;
     display: flex;
     flex-wrap: wrap;
     padding-top: 20px;
     padding-bottom: 20px;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+img{
+    background-size:cover;
+    height: 400px;
+    width: 600px;
+}
+.info{
+    justify-content: space-around;
+    padding: 5px 20px;
+    display: flex;
+    font-size: 18px;
+}
+.photo-card{
+    margin-bottom: 40px;
+    background-size:cover;
 }
