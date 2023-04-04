@@ -7,6 +7,7 @@ morePhotosButton.classList.add('is-hidden')
 
 startPhotos.addEventListener('click',makerGalery )
 morePhotosButton.addEventListener('click',makeMorePhotos) 
+container.addEventListener('click',stopDefAction)
 
 import {JSONPlaceholderAPI} from './url.js'
 import galaryCreator from './galary.hbs'
@@ -40,6 +41,15 @@ function makerGalery(e){
     makeMorePhotos()
 }
 
-
-
+function stopDefAction(evt) {
+    evt.preventDefault();
+    if (evt.target.nodeName !== "IMG") {
+        return console.log('missClick')
+    };
+    var lightbox = new SimpleLightbox('.gallery .photo-card img', 
+    {captions: true, 
+     captionDelay: 250 , 
+     captionsData : 'alt', 
+    });
+}
 
