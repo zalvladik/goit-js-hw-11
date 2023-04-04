@@ -19,8 +19,7 @@ async function makeMorePhotos(e) {
     if(currentValue.value === ''){
         return Notiflix.Notify.failure('Будь ласка введіть слово для пошуку');
     }
-    urlAPI.fetchPhotos(currentValue.value)
-    .then(data =>{
+    await urlAPI.fetchPhotos(currentValue.value).then(data =>{
     if(data.hits.length === 0){
        morePhotosButton.classList.add('is-hidden')
       return Notiflix.Notify.failure('Будь ласка введіть правильне слово для пошуку')
